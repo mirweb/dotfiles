@@ -3,3 +3,5 @@
 	email = mirko@wils.tk
 [push]
 	default = simple
+[core]
+	editor = vim
