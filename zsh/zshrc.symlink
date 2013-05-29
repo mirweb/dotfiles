@@ -45,6 +45,14 @@ plugins=(git gradle grails)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+# Customize to your needs...
+
+#Tibco Libs/Bins im Umgebung
+export PATH=$PATH:/usr/tibco/tibrv/bin:/usr/tibco/tibrv/lib
+
+export LD_LIBRARY_PATH=/usr/tibco/tibrv/lib/
+
+
 
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
-[[ -s "/home/mirweb/.gvm/bin/gvm-init.sh" ]] && source "/home/mirweb/.gvm/bin/gvm-init.sh"
+[[ -s "$HOME/.gvm/bin/gvm-init.sh" ]] && source "$HOME/.gvm/bin/gvm-init.sh"
