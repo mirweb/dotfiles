@@ -1,3 +1,15 @@
+# Home
 Host pi
 	HostName raspbmc.local
 	User pi
+
+# Work
+HashKnownHosts no
+ 
+Host zfrbdeploy
+	User hudson
+ 	RemoteForward 8082 localhost:8081
+ 
+Host zfrb*
+	User webermir@wacker
+
