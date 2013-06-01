@@ -1,6 +1,5 @@
 # Home
 Host pi
-	HostName raspbmc.local
 	User pi
 
 # Work
