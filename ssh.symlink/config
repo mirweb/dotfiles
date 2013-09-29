@@ -2,6 +2,9 @@
 Host pi
 	User pi
 
+Host qnap
+	User admin
+
 # Work
 HashKnownHosts no
  
