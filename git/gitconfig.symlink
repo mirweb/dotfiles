@@ -5,3 +5,5 @@
 	editor = vim
 [credential]
 	helper = store
+[user]
+	name = Mirko Weber
