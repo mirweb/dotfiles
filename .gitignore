@@ -2,3 +2,6 @@ ssh.symlink/id_rsa
 ssh.symlink/id_rsa.pub
 ssh.symlink/known_hosts*
 ssh.symlink/authorized_keys
+config/sublime-text-3/Cache
+config/sublime-text-3/Index
+config/sublime-text-3/Local/
