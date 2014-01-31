@@ -1,8 +1,8 @@
 # Home
-Host pi
-	User pi
-
 Host qnap
+	User admin
+
+Host nas
 	User admin
 
 # Work
