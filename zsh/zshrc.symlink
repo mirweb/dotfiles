@@ -47,9 +47,11 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 # Customize to your needs...
 
+# alias for sag-hosts
+alias rootsh='wsudo -u root -s'
+
 #Tibco Libs/Bins im Umgebung
 export PATH=$PATH:/usr/tibco/tibrv/bin:/usr/tibco/tibrv/lib
-
 export LD_LIBRARY_PATH=/usr/tibco/tibrv/lib/
 
 
