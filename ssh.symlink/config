@@ -15,3 +15,7 @@ Host zfrbdeploy
 Host zfrb*
 	User webermir@wacker
 
+Host zfrb* zfbg* xbgh* 
+	StrictHostKeyChecking no
+	UserKnownHostsFile=/dev/null
+	LogLevel=quiet
