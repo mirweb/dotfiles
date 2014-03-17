@@ -40,7 +40,7 @@ DISABLE_CORRECTION="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git gradle grails screen)
+plugins=(git gradle grails screen cp rsync)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -49,6 +49,10 @@ source $ZSH/oh-my-zsh.sh
 
 # alias for sag-hosts
 alias rootsh='wsudo -u root bash -l'
+
+# alias 
+alias vi='vim'
+
 
 #Tibco Libs/Bins im Umgebung
 export PATH=$PATH:/usr/tibco/tibrv/bin:/usr/tibco/tibrv/lib
