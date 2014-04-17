@@ -49,3 +49,9 @@
 [submodule "vim/vim.symlink/bundle/neosnippet-snippets"]
 	path = vim/vim.symlink/bundle/neosnippet-snippets
 	url = https://github.com/Shougo/neosnippet-snippets.git
+[submodule "vim/vim.symlink/bundle/vim-surround"]
+	path = vim/vim.symlink/bundle/vim-surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule "vim/vim.symlink/bundle/sessionman.vim"]
+	path = vim/vim.symlink/bundle/sessionman.vim
+	url = https://github.com/vim-scripts/sessionman.vim.git
