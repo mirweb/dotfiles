@@ -15,7 +15,7 @@ if has('clipboard')
     endif
 endif
 set history=1000                    " Store a ton of history (default is 20)
-set spell                           " Spell checking on
+set nospell                           " Spell checking on
 set hidden                          " Allow buffer switching without saving
 
 au FileType gitcommit au! BufEnter COMMIT_EDITMSG call setpos('.', [0, 1, 1, 0])
@@ -37,6 +37,7 @@ if has('cmdline_info')
     set showcmd                 " Show partial commands in status line and
     " Selected characters/lines in visual mode
 endif
+set sessionoptions+=resize,winpos
 
 if has('statusline')
     set laststatus=2
@@ -66,6 +67,9 @@ set scrolloff=3                 " Minimum lines to keep above and below cursor
 set foldenable                  " Auto fold code
 set list
 set listchars=tab:›\ ,trail:•,extends:#,nbsp:. " Highlight problematic whitespace
+if has('gui_running')
+    set guioptions-=T
+endif
 " }
 "
 "" Formatting {
@@ -106,4 +110,6 @@ let mapleader = ','
   " TagBar {
         nnoremap <silent> <leader>tt :TagbarToggle<CR>
   "}
+" neocomplcache {
+        let g:neocomplcache_enable_at_startup = 1
 "}
