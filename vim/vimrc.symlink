@@ -110,6 +110,4 @@ let mapleader = ','
   " TagBar {
         nnoremap <silent> <leader>tt :TagbarToggle<CR>
   "}
-" neocomplcache {
-        let g:neocomplcache_enable_at_startup = 1
 "}
