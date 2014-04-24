@@ -34,9 +34,6 @@
 [submodule "vim/vim.symlink/bundle/vim-gradle"]
 	path = vim/vim.symlink/bundle/vim-gradle
 	url = https://github.com/tfnico/vim-gradle.git
-[submodule "vim/vim.symlink/bundle/grails-vim"]
-	path = vim/vim.symlink/bundle/grails-vim
-	url = https://github.com/vim-scripts/grails-vim.git
 [submodule "vim/vim.symlink/bundle/tagbar"]
 	path = vim/vim.symlink/bundle/tagbar
 	url = https://github.com/majutsushi/tagbar.git
@@ -58,3 +55,6 @@
 [submodule "vim/vim.symlink/bundle/vim-snipmate"]
 	path = vim/vim.symlink/bundle/vim-snipmate
 	url = https://github.com/garbas/vim-snipmate.git
+[submodule "vim/vim.symlink/bundle/grails-vim"]
+	path = vim/vim.symlink/bundle/grails-vim
+	url = https://github.com/vim-scripts/grails-vim.git
