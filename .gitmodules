@@ -52,9 +52,9 @@
 [submodule "vim/vim.symlink/bundle/vim-addon-mw-utils"]
 	path = vim/vim.symlink/bundle/vim-addon-mw-utils
 	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
-[submodule "vim/vim.symlink/bundle/vim-snipmate"]
-	path = vim/vim.symlink/bundle/vim-snipmate
-	url = https://github.com/garbas/vim-snipmate.git
 [submodule "vim/vim.symlink/bundle/grails-vim"]
 	path = vim/vim.symlink/bundle/grails-vim
 	url = https://github.com/vim-scripts/grails-vim.git
+[submodule "vim/vim.symlink/bundle/vim-snipmate"]
+	path = vim/vim.symlink/bundle/vim-snipmate
+	url = https://github.com/garbas/vim-snipmate.git
