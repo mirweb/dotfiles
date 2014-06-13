@@ -59,3 +59,6 @@
 [submodule "vim/vim.symlink/bundle/vim-snipmate"]
 	path = vim/vim.symlink/bundle/vim-snipmate
 	url = https://github.com/garbas/vim-snipmate.git
+[submodule "vim/vim.symlink/bundle/vim-ansible-yaml"]
+	path = vim/vim.symlink/bundle/vim-ansible-yaml
+	url = https://github.com/chase/vim-ansible-yaml.git
