@@ -1,0 +1,7 @@
+---
+
+- hosts: workstation
+  tasks:
+    - include: tasks/packages.yml
+  handlers:
+    - include: handlers/apt.yml

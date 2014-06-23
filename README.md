@@ -3,6 +3,13 @@ dotfiles
 
 dotfiles
 
+Installation with ansible
+-------------------------
+    sudo apt-get install git ansible
+    git clone https://github.com/mirweb/dotfiles.git .dotfiles
+    cd .dotfiles/playbooks
+    ansible-playbook -i inventory bootstrap.yml --ask-sudo-pass
+
 Installation
 ------------
 

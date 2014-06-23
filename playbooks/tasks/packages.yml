@@ -1,0 +1,27 @@
+---
+- name: install additional repos
+  apt_repository: repo="{{ item }}"
+  sudo: yes
+  notify:
+    - apt-get update
+  with_items:
+    - deb http://dl.google.com/linux/chrome/deb/ stable main
+
+- name: install keys for repos
+  apt_key: url={{ item }}
+  sudo: yes
+  notify:
+    - apt-get update
+  with_items:
+    - http://keyserver.ubuntu.com/pks/lookup?op=get&search=0xA040830F7FAC5991
+
+- name: install all base packages 
+  apt: name={{ item }} state=present
+  sudo: yes
+  with_items:
+    - git
+    - zsh
+    - ansible
+    - vim
+    - vim-gtk
+    - google-chrome-stable
