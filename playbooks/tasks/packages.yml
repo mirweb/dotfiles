@@ -6,6 +6,7 @@
     - apt-get update
   with_items:
     - deb http://dl.google.com/linux/chrome/deb/ stable main
+    - deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main
 
 - name: install keys for repos
   apt_key: url={{ item }}
@@ -14,6 +15,7 @@
     - apt-get update
   with_items:
     - http://keyserver.ubuntu.com/pks/lookup?op=get&search=0xA040830F7FAC5991
+    - http://keyserver.ubuntu.com/pks/lookup?op=get&search=0xC2518248EEA14886
 
 - name: install all base packages 
   apt: name={{ item }} state=present
@@ -25,3 +27,6 @@
     - vim
     - vim-gtk
     - google-chrome-stable
+    - oracle-java7-installer
+    - oracle-java8-installer
+    - oracle-java7-set-default
