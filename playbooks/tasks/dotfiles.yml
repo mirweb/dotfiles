@@ -1,0 +1,10 @@
+---
+- name: symlink all dotfiles
+  file: src="{{ item.src }}" dest="{{ item.dest }}" state=link force=yes
+  with_items:
+      - { src: "{{ dotfiles }}/vim/vimrc.symlink", dest: "{{ local_home }}/.vimrc" }
+      - { src: "{{ dotfiles }}/vim/vim.symlink", dest: "{{ local_home }}/.vim" }
+      - { src: "{{ dotfiles }}/ssh.symlink", dest: "{{ local_home }}/.ssh" }
+      - { src: "{{ dotfiles }}/zsh/zshrc.symlink", dest: "{{ local_home }}/.zshrc" }
+      - { src: "{{ dotfiles }}/git/gitconfig.symlink", dest: "{{ local_home }}/.gitconfig" }
+      - { src: "{{ dotfiles }}/screen/screenrc.symlink", dest: "{{ local_home }}/.screenrc" }
