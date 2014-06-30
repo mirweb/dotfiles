@@ -8,3 +8,9 @@
       - { src: "{{ dotfiles }}/zsh/zshrc.symlink", dest: "{{ local_home }}/.zshrc" }
       - { src: "{{ dotfiles }}/git/gitconfig.symlink", dest: "{{ local_home }}/.gitconfig" }
       - { src: "{{ dotfiles }}/screen/screenrc.symlink", dest: "{{ local_home }}/.screenrc" }
+      - { src: "{{ dotfiles }}/atom/packages", dest: "{{ local_home }}/.atom/packages" }
+      - { src: "{{ dotfiles }}/atom/config.cson", dest: "{{ local_home }}/.atom/config.cson" }
+      - { src: "{{ dotfiles }}/atom/init.coffee", dest: "{{ local_home }}/.atom/init.coffee" }
+      - { src: "{{ dotfiles }}/atom/keymap.cson", dest: "{{ local_home }}/.atom/keymap.scon" }
+      - { src: "{{ dotfiles }}/atom/snippets.cson", dest: "{{ local_home }}/.atom/snippets.cson" }
+      - { src: "{{ dotfiles }}/atom/styles.less", dest: "{{ local_home }}/.atom/styles.less" }

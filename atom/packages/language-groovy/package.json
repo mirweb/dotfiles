@@ -1,0 +1,27 @@
+{
+  "name": "language-groovy",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Groovy language support in Atom",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jakehp/language-groovy"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {},
+  "bugs": {
+    "url": "https://github.com/Jakehp/language-groovy/issues"
+  },
+  "readme": "# Groovy language support in Atom\n\nAdds syntax highlighting and snippets to Groovy files in Atom.\n\nOriginally [converted](http://atom.io/docs/latest/converting-a-text-mate-bundle)\nfrom the [groovy.tmbundle](https://github.com/textmate/groovy.tmbundle).\n\nContributions are greatly appreciated. Please fork this repository and open a\npull request to add snippets, make grammar tweaks, etc.\n",
+  "readmeFilename": "README.md",
+  "homepage": "https://github.com/Jakehp/language-groovy",
+  "_id": "language-groovy@0.2.0",
+  "dist": {
+    "shasum": "b630795121e263bad8982fd4b3d6a6472a6784e2"
+  },
+  "_resolved": "/tmp/d-114527-15158-1sycqlc/package.tgz",
+  "_from": "/tmp/d-114527-15158-1sycqlc/package.tgz"
+}

@@ -17,7 +17,7 @@
     - http://keyserver.ubuntu.com/pks/lookup?op=get&search=0xA040830F7FAC5991
     - http://keyserver.ubuntu.com/pks/lookup?op=get&search=0xC2518248EEA14886
 
-- name: install all base packages 
+- name: install all base packages
   apt: name={{ item }} state=present
   sudo: yes
   with_items:
@@ -32,7 +32,7 @@
     - python-pip
 
 - name: install python apps
-  pip: name={{ item }} state=latest
+  pip: name={{ item }}
   sudo: yes
   with_items:
       - ansible
