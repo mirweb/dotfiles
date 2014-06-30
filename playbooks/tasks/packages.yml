@@ -6,7 +6,7 @@
     - apt-get update
   with_items:
     - deb http://dl.google.com/linux/chrome/deb/ stable main
-    - deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main
+    - deb http://ppa.lau   nchpad.net/webupd8team/java/ubuntu trusty main
 
 - name: install keys for repos
   apt_key: url={{ item }}
