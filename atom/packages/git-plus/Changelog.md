@@ -1,5 +1,12 @@
 ## Changelog
 
+### 3.7.0
+
+- Can change commentchar in Git configs and Git-plus will use it in commit messages
+
+### 3.6.0
+- Can now push tags to remote
+
 ### 3.5.0
 
 - The more common commands are now accessible through keybindings  

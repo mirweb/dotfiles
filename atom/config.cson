@@ -12,3 +12,5 @@
   ]
 'autosave':
   'enabled': true
+'tree-view': {}
+'autoclose-html': {}
