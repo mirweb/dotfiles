@@ -1,6 +1,21 @@
 ## Changelog
 
+### 3.9.0
+
+- From the Git Status list, you can go to the modified file or open its diff file
+### 3.8.0
+
+- Adding commands for Git stash
+
 ### 3.7.0
+
+- new `Reset HEAD` allows unstaging all changes
+
+### 3.6.2
+
+- Patch to resolve when atom project is a subfolder of a repository
+
+### 3.6.1
 
 - Can change commentchar in Git configs and Git-plus will use it in commit messages
 

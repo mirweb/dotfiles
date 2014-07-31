@@ -1,0 +1,30 @@
+{
+  "name": "atom-cli-diff",
+  "main": "./lib/diff",
+  "version": "0.6.4",
+  "description": "Diff package based in TextMate's diff bundle",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mafiuss/atom-cli-diff"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {
+    "shell-escape": "0.1.0",
+    "temporary": "0.0.8"
+  },
+  "readme": "# diff package\n\nTextMate's diff bundle port\n\n![A screenshot of your spankin' package](https://db.tt/aixCfPW5)\n\nDiff two selected files on the tree view by using the context menu (right click)\n\nDiff the opened file in the active editor with the clipboard (packages > diff > Diff active editor file with clipboard)\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/mafiuss/atom-cli-diff/issues"
+  },
+  "homepage": "https://github.com/mafiuss/atom-cli-diff",
+  "_id": "atom-cli-diff@0.6.4",
+  "dist": {
+    "shasum": "6f84a601f9d6a7ec38bd050cee6899c8e309ebd0"
+  },
+  "_resolved": "/tmp/d-114629-23465-1pz5m0c/package.tgz",
+  "_from": "/tmp/d-114629-23465-1pz5m0c/package.tgz"
+}

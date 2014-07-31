@@ -89,6 +89,12 @@ gitAdd = ({file, stdout, stderr, exit}={}) ->
     stderr: stderr if stderr?
     exit: exit
 
+gitResetHead = ->
+  gitCmd
+    args: ['reset', 'HEAD']
+    stdout: (data) ->
+      new StatusView(type: 'success', message: 'All changes unstaged')
+
 _getGitPath = ->
   atom.config.get('git-plus.gitPath') ? 'git'
 
@@ -116,9 +122,9 @@ dir = ->
   else
     atom.project.getRepo()?.getWorkingDirectory() ? atom.project.getPath()
 
-# returns filepath relativized for either a submodule or a project
+# returns filepath relativized for either a submodule, repository or a project
 relativize = (path) ->
-  getSubmodule(path)?.relativize(path) ? atom.project.relativize(path)
+  getSubmodule(path)?.relativize(path) ? atom.project.getRepo()?.relativize(path) ? atom.project.relativize(path)
 
 # returns submodule for given file or undefined
 getSubmodule = (path) ->
@@ -131,6 +137,7 @@ module.exports.unstagedFiles = gitUnstagedFiles
 module.exports.diff = gitDiff
 module.exports.refresh = gitRefreshIndex
 module.exports.status = gitStatus
+module.exports.reset = gitResetHead
 module.exports.add = gitAdd
 module.exports.dir = dir
 module.exports.relativize = relativize
