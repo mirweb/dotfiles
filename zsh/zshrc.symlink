@@ -64,5 +64,4 @@ export LD_LIBRARY_PATH=/usr/tibco/tibrv/lib/
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
 [[ -s "$HOME/.gvm/bin/gvm-init.sh" ]] && source "$HOME/.gvm/bin/gvm-init.sh"
 
-[ -s "/home/mirweb/.nvm/nvm.sh" ] && . "/home/mirweb/.nvm/nvm.sh" # This loads nvm
-[ -s "/home/webermir/.nvm/nvm.sh" ] && . "/home/webermir/.nvm/nvm.sh" # This loads nvm
+[ -s "$HOME/.nvm/nvm.sh" ] && . "$HOME/.nvm/nvm.sh" # This loads nvm
