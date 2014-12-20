@@ -25,10 +25,9 @@
     - zsh
     - vim
     - vim-gtk
+    - keepass2
     - google-chrome-stable
-    - oracle-java7-installer
-    - oracle-java8-installer
-    - oracle-java7-set-default
+    - curl
     - python-pip
 
 - name: install python apps
