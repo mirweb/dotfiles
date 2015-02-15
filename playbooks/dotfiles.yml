@@ -1,8 +1,0 @@
----
-
-- hosts: workstation
-  vars:
-    local_home: "{{ lookup('env','HOME') }}"
-    dotfiles: "{{ local_home }}/.dotfiles"
-  tasks:
-    - include: tasks/dotfiles.yml
