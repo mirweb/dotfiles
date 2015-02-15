@@ -10,13 +10,13 @@ links = {"/vim/vimrc.symlink":"/.vimrc",
         "/git/gitconfig.symlink":"/.gitconfig",
         "/screen/screenrc.symlink":"/.screenrc"}
 
-HOME = os.getenv("HOME")
+HOME = os.path.abspath(os.getenv("HOME"))
 DOTFILES = HOME + "/.dotfiles"
 
 for dest, src  in links.iteritems():
     homeLink = HOME + src
     dotPathDest = DOTFILES + dest
-    if os.path.realpath(homeLink) == os.path.abspath(dotPathDest):
+    if os.path.realpath(homeLink) == os.path.realpath(dotPathDest):
         print "\t[exists] ", homeLink, " => ", dotPathDest
     else:
         if os.path.exists(homeLink):
@@ -24,5 +24,5 @@ for dest, src  in links.iteritems():
             backup = HOME + '/' + os.path.basename(homeLink) + '_' + dt
             print "\t[backup] ", homeLink + ' => ' + backup
             os.rename(homeLink, backup)
-        print "\t[create] " + homeLink + dotPathDest
+        print "\t[create] " + homeLink +" => "+ dotPathDest
         os.symlink(dotPathDest,homeLink)
