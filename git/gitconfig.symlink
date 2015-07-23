@@ -3,6 +3,7 @@
 	default = matching
 [core]
 	editor = vim
+	fileMode = false
 [credential]
 	helper = store
 [user]
