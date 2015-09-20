@@ -8,3 +8,4 @@ config/sublime-text-3/Local/
 vim/vim.symlink/backup/*
 vim/vim.symlink/undo/*
 vim/vim.symlink/swp/*
+vim/vim.symlink/.netrwhist
