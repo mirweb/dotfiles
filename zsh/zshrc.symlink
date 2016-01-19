@@ -53,7 +53,7 @@ alias rootsh='wsudo -u root bash -l'
 # alias
 alias vi='vim'
 alias o='xdg-open'
-
+alias ansible-playbook='ansible-playbook --vault-password-file ~/.vault_pass.txt'
 
 #Tibco Libs/Bins im Umgebung
 export PATH=$PATH:/usr/tibco/tibrv/bin:/usr/tibco/tibrv/lib
