@@ -7,3 +7,6 @@ set number              " line numbers
 colorscheme molokai      " colorscheme desert
 set nobackup            " get rid of anoying ~file
 map <C-n> :NERDTreeToggle<CR>
+set backupdir=~/.vim/backup//
+set directory=~/.vim/swap//
+set undodir=~/.vim/undo//
