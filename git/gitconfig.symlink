@@ -8,6 +8,7 @@
 	helper = store
 [user]
 	name = Mirko Weber
+	email = mirko@wils.tk
 [filter "lfs"]
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
