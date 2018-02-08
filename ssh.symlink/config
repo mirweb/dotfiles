@@ -1,3 +1,4 @@
+IgnoreUnknown UseKeychain
 UseKeychain yes
 # Home
 Host qnap
