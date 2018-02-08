@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 import datetime
 import os
@@ -13,16 +13,16 @@ links = {"/vim/vimrc.symlink":"/.vimrc",
 HOME = os.path.abspath(os.getenv("HOME"))
 DOTFILES = HOME + "/.dotfiles"
 
-for dest, src  in links.iteritems():
+for dest, src  in links.items():
     homeLink = HOME + src
     dotPathDest = DOTFILES + dest
     if os.path.realpath(homeLink) == os.path.realpath(dotPathDest):
-        print "\t[exists] ", homeLink, " => ", dotPathDest
+        print("\t[exists] ", homeLink, " => ", dotPathDest)
     else:
         if os.path.exists(homeLink):
             dt = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
             backup = HOME + '/' + os.path.basename(homeLink) + '_' + dt
-            print "\t[backup] ", homeLink + ' => ' + backup
+            print("\t[backup] ", homeLink , ' => ', backup)
             os.rename(homeLink, backup)
-        print "\t[create] " + homeLink +" => "+ dotPathDest
+        print("\t[create] " ,homeLink ," => ", dotPathDest)
         os.symlink(dotPathDest,homeLink)
