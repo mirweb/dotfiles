@@ -1,8 +1,8 @@
 IgnoreUnknown UseKeychain
 UseKeychain yes
 # Home
-Host qnap
-	User admin
+Host raspi
+  User ubuntu
 
 Host nas
 	User admin
