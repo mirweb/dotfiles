@@ -1,0 +1,8 @@
+IgnoreUnknown UseKeychain
+UseKeychain yes
+# Home
+Host raspi
+  User ubuntu
+
+Host nas
+	User admin

@@ -1,4 +1,3 @@
-execute pathogen#infect()
 set backspace=2         " backspace in insert mode works like normal editor
 syntax on               " syntax highlighting
 filetype plugin on
@@ -9,10 +8,3 @@ set autoindent          " auto indenting
 set foldmethod=indent
 set foldlevel=99
 set number              " line numbers
-colorscheme molokai      " colorscheme desert
-map <C-n> :NERDTreeToggle<CR>
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-set directory=~/.vim/swp/,~/.tmp,/tmp
-set backupdir=~/.vim/backup/,~/.tmp,/tmp
-

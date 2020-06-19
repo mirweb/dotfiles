@@ -1,9 +1,6 @@
-dotfiles
-========
+# dotfiles
 
-
-Installation
-------------
+## Installation
 
     sudo apt-get install zsh git
     git clone https://github.com/mirweb/dotfiles.git .dotfiles
@@ -12,3 +9,11 @@ Installation
     git submodule update
     ./bootstrap.py
     chsh webermir -> /bin/zsh
+
+## Provisioning other host
+
+running from inside .dotfiles
+
+```bash
+ansible-playbook -i host, distribut-dotfiles.yml
+```
