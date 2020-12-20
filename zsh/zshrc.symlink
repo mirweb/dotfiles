@@ -53,4 +53,4 @@ alias rootsh='wsudo -u root bash -l'
 # alias
 alias vi='vim'
 alias o='xdg-open'
-#alias ansible-playbook='ansible-playbook --vault-password-file ~/.vault_pass.txt'
+alias ansible-playbook='ansible-playbook --vault-password-file ~/.ansible_vault_pw'
