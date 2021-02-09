@@ -5,9 +5,6 @@ Host zfrbdeploy
 	User hudson
  	RemoteForward 8082 localhost:8081
  
-Host zfrb*
-	User webermir@wacker
-
 Host zfrb* zfbg* xbgh* 
 	StrictHostKeyChecking no
 	UserKnownHostsFile=/dev/null
