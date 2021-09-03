@@ -6,6 +6,19 @@ Host zfrbdeploy
  	RemoteForward 8082 localhost:8081
  
 Host zfrb* zfbg* xbgh* 
+	User webermir
 	StrictHostKeyChecking no
 	UserKnownHostsFile=/dev/null
 	LogLevel=quiet
+
+Host deployserver
+  HostName fab301vdeploy01
+  User webermir
+  RequestTTY force
+  RemoteCommand screen -dR webermir
+
+Host buildserver
+  HostName xbghsfavbld01
+  User webermir
+  RequestTTY force
+  RemoteCommand screen -dR webermir
