@@ -1,0 +1,14 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.zshrc: home/zshrc
+    ~/.vimrc: home/vimrc
+    ~/.screenrc: home/screenrc
+    ~/.ssh: home/ssh
+
+#- shell:
+#  - [chsh -s $(which zsh), Making zsh the default shell]

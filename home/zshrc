@@ -40,12 +40,15 @@ DISABLE_CORRECTION="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git gradle grails screen cp rsync docker sudo common-aliases osx)
+plugins=(git gradle grails screen cp rsync docker sudo common-aliases macos)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 # Customize to your needs...
+## Enable docker completion even for stacked 
+zstyle ':completion:*:*:docker:*' option-stacking yes
+zstyle ':completion:*:*:docker-*:*' option-stacking yes
 
 # alias for sag-hosts
 alias rootsh='wsudo -u root bash -l'

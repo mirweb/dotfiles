@@ -1,6 +1,8 @@
+# setting for macos
 IgnoreUnknown UseKeychain
 UseKeychain yes
 ForwardAgent yes
+AddKeysToAgent yes
 # Home
 Host raspi
   User ubuntu
