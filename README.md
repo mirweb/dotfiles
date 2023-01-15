@@ -5,14 +5,14 @@ dotfile repo based on [dotbot](https://github.com/anishathalye/dotbot)
 ## install to new host
 
 ```sh
-git clone https://github.com/mirweb/dotfiles.git --recursive
-cd dotfiles && ./install
+git clone https://github.com/mirweb/dotfiles.git ~/.dotfiles --recursive
+cd ~/.dotfiles && ./install
 ```
 
 ## pull updates 
 
 ```sh
-cd ~/.dotfile
+cd ~/.dotfiles
 git pull
 ./install
 ```
