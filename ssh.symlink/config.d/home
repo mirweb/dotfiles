@@ -1,5 +1,6 @@
 IgnoreUnknown UseKeychain
 UseKeychain yes
+ForwardAgent yes
 # Home
 Host raspi
   User ubuntu
