@@ -5,5 +5,9 @@ ForwardAgent yes
 Host raspi
   User ubuntu
 
+Host syno
+  HostName syno
+  User mirweb
+
 Host nas
 	User admin
