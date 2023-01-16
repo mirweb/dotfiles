@@ -16,3 +16,12 @@ cd ~/.dotfiles
 git pull
 ./install
 ```
+
+## bootsrap extra settings
+
+* changing default chell needs sudo to root rights
+
+```sh
+cd ~/.dotfiles
+./install -c bootstrap.conf.yaml 
+```

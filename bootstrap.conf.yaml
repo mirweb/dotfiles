@@ -1,0 +1,2 @@
+- shell:
+  - [chsh -s $(which zsh), Making zsh the default shell]
