@@ -1,7 +1,7 @@
 [submodule "dotbot"]
 	path = dotbot
-	url = https://github.com/anishathalye/dotbot
+	url = https://gitlab.wils-tk.i234.me/mirweb/dotbot.git
 	ignore = dirty
 [submodule "oh-my-zsh"]
 	path = oh-my-zsh
-	url = https://github.com/ohmyzsh/ohmyzsh.git
+	url = https://gitlab.wils-tk.i234.me/mirweb/oh-my-zsh.git
