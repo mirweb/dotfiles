@@ -1,6 +1,7 @@
 # dotfiles
 
-dotfile repo based on [dotbot](https://github.com/anishathalye/dotbot) 
+- dotfile repo based on [dotbot](https://github.com/anishathalye/dotbot)
+- starting tutorial see [Bootstrap your Dotfiles with dotbot](https://www.elliotdenolf.com/posts/bootstrap-your-dotfiles-with-dotbot)
 
 ## install to new host
 
