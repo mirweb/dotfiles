@@ -56,8 +56,11 @@ source $ZSH/oh-my-zsh.sh
 zstyle ':completion:*:*:docker:*' option-stacking yes
 zstyle ':completion:*:*:docker-*:*' option-stacking yes
 
-# alias for sag-hosts
-alias rootsh='wsudo -u root bash -l'
+
+#set ssh-key-agent to 1password if available
+if [[ -a ~/.1password/agent.sock ]]; then
+    export SSH_AUTH_SOCK=~/.1password/agent.sock
+fi
 
 # alias
 alias vi='vim'
