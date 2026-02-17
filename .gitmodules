@@ -2,6 +2,3 @@
 	path = dotbot
 	url = https://gitlab.wils-tk.i234.me/mirweb/dotbot.git
 	ignore = dirty
-[submodule "oh-my-zsh"]
-	path = oh-my-zsh
-	url = https://gitlab.wils-tk.i234.me/mirweb/oh-my-zsh.git
