@@ -1,68 +1,56 @@
-#shell completion for brew https://docs.brew.sh/Shell-Completion
-if type brew &>/dev/null
-then
+# shell completion for brew https://docs.brew.sh/Shell-Completion
+if type brew &>/dev/null; then
   FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 fi
 
-# Path to your oh-my-zsh configuration.
-ZSH=$HOME/.dotfiles/oh-my-zsh
+# History behavior
+HISTSIZE=50000
+SAVEHIST=50000
+HISTFILE=~/.zsh_history
+setopt appendhistory
+setopt sharehistory
+setopt hist_ignore_all_dups
+setopt hist_reduce_blanks
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-ZSH_THEME="mortalscumbag"
+# Be conservative like previous config
+unsetopt correct
 
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+# Completion
+autoload -Uz compinit
+compinit
 
-# Set to this to use case-sensitive completion
-# CASE_SENSITIVE="true"
+# Use modern completion menu behavior
+zmodload zsh/complist
+setopt auto_menu
+setopt complete_in_word
+zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
-# Comment this out to disable bi-weekly auto-update checks
- DISABLE_AUTO_UPDATE="true"
-
-# Uncomment to change how often before auto-updates occur? (in days)
-# export UPDATE_ZSH_DAYS=13
-
-# Uncomment following line if you want to disable colors in ls
-# DISABLE_LS_COLORS="true"
-
-# Uncomment following line if you want to disable autosetting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment following line if you want to disable command autocorrection
-DISABLE_CORRECTION="true"
-
-# Uncomment following line if you want red dots to be displayed while waiting for completion
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment following line if you want to disable marking untracked files under
-# VCS as dirty. This makes repository status check for large repositories much,
-# much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git gradle grails screen cp rsync docker sudo common-aliases macos)
-
-source $ZSH/oh-my-zsh.sh
-
-# Customize to your needs...
-# Customize to your needs...
-## Enable docker completion even for stacked 
+# Enable docker completion option stacking (kept from old config)
 zstyle ':completion:*:*:docker:*' option-stacking yes
 zstyle ':completion:*:*:docker-*:*' option-stacking yes
 
+# Prompt (oh-my-zsh independent), similar compact style:
+# user@host:path (git-branch) %#
+autoload -Uz colors vcs_info
+colors
+precmd() { vcs_info }
+zstyle ':vcs_info:git:*' formats ' (%F{cyan}%b%f)'
+setopt prompt_subst
+PROMPT='%F{green}%n@%m%f:%F{blue}%~%f${vcs_info_msg_0_} %# '
 
-#set ssh-key-agent to 1password if available
-if [[ -a ~/.1password/agent.sock ]]; then
-    export SSH_AUTH_SOCK=~/.1password/agent.sock
-fi
-
-# alias
+# aliases (kept from old config)
 alias vi='vim'
 alias o='xdg-open'
 alias ansible-playbook='ansible-playbook --vault-password-file ~/.ansible_vault_pw'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ll='ls -lah'
+alias la='ls -A'
+alias l='ls -CF'
+alias dk='docker'
+
+# Useful keybindings
+bindkey -e
+bindkey '^[[1;5C' forward-word
+bindkey '^[[1;5D' backward-word
