@@ -6,7 +6,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
-## [2026-03-29] (2)
+## [1.0.0] - 2026-03-29
 
 ### Added
 - `install.sh` script based on GNU Stow with support for all/single module stow, restow, and delete
@@ -20,7 +20,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Migrated `~/.gitconfig` to stow-managed `git/.gitconfig` module
 - Updated README with stow-based setup and usage instructions
 
-## [2026-03-29]
+## [1.0.0-pre] - 2026-03-29
 
 ### Added
 - OCI k3s SSH host entry (`~/.ssh/config.d/home`)
