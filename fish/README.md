@@ -1,40 +1,41 @@
 # fish module
 
-Manages `~/.config/fish/config.fish` via GNU Stow.
+Manages `~/.config/fish/` via GNU Stow.
 
-## What is NOT tracked (gitignored)
+## Files
 
-`fish_variables` is excluded from git because it contains:
-- Universal variables set by fish and tools (machine-specific)
-- **Secrets** like API tokens — never commit this file
+| Datei | Zweck | Im Repo |
+|---|---|---|
+| `conf.d/env.fish` | Öffentliche Umgebungsvariablen (`set -gx`) | ja |
+| `conf.d/secrets.fish.example` | Template für lokale Secrets | ja |
+| `conf.d/secrets.fish` | Lokale Secrets (nie committen) | nein |
+| `fish_variables` | Universelle Variablen (machine-specific) | nein |
+| `config.fish` | Shell-Init, PATH, Tool-Integration | ja |
 
-## Required variables
-
-Set these once on each machine with `set -Ux` (universal, persists across sessions):
-
-### GitLab
-
-```fish
-set -Ux GITLAB_TOKEN "glpat-xxxxxxxxxxxxxxxxxxxx"
-set -Ux GITLAB_PROJECT_ID "12345678"
-```
-
-### Other secrets / tokens
-
-```fish
-set -Ux MY_API_KEY "..."
-```
-
-Universal variables are stored in `~/.config/fish/fish_variables` automatically by fish.
-You do not need to add them to `config.fish`.
-
-## Setup on a new machine
+## Setup auf einer neuen Maschine
 
 ```sh
-# 1. Stow the module
+# 1. Modul einrichten
 cd ~/.dotfiles && ./install.sh fish
 
-# 2. Set required universal variables (see above)
-set -Ux GITLAB_TOKEN "your-token-here"
-set -Ux GITLAB_PROJECT_ID "your-project-id"
+# 2. Secrets anlegen
+cp ~/.config/fish/conf.d/secrets.fish.example ~/.config/fish/conf.d/secrets.fish
+
+# 3. Secrets eintragen und laden
+$EDITOR ~/.config/fish/conf.d/secrets.fish
+source ~/.config/fish/conf.d/secrets.fish
+```
+
+## Variablen hinzufügen
+
+**Öffentliche Vars** (z.B. `EDITOR`, Tool-Pfade) → `conf.d/env.fish` mit `set -gx`:
+
+```fish
+set -gx MY_VAR "value"
+```
+
+**Secrets** (Tokens, API-Keys) → `conf.d/secrets.fish` (nur lokal, nicht im Repo), Beispiel in `secrets.fish.example` ergänzen:
+
+```fish
+set -gx MY_SECRET "value"
 ```

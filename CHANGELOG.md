@@ -6,6 +6,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+## [1.1.1] - 2026-03-29
+
+### Added
+- `fish/conf.d/env.fish`: public environment variables (`set -gx`) managed in repo
+- `fish/conf.d/secrets.fish.example`: template for local secrets with setup instructions
+
+### Changed
+- `fish/config.fish`: added comment pointing to env.fish / secrets.fish setup
+- `fish/README.md`: updated to reflect conf.d-based env/secrets setup
+
 ## [1.1.0] - 2026-03-29
 
 ### Added

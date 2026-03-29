@@ -1,3 +1,6 @@
+# Public vars are loaded automatically from conf.d/env.fish.
+# Secrets are loaded automatically from conf.d/secrets.fish (not in repo, see secrets.fish.example).
+
 # Added by LM Studio CLI (lms)
 set -gx PATH $PATH /Users/mirweb/.cache/lm-studio/bin
 
