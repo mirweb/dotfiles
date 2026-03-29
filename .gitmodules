@@ -1,4 +1,0 @@
-[submodule "dotbot"]
-	path = dotbot
-	url = https://gitlab.wils-tk.i234.me/mirweb/dotbot.git
-	ignore = dirty
