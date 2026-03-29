@@ -1,5 +1,6 @@
-home/ssh/id_*
-home/ssh/known_hosts*
-home/ssh/podman-machine*
-home/ssh/authorized_keys
+ssh/.ssh/id_*
+ssh/.ssh/known_hosts*
+ssh/.ssh/podman-machine*
+ssh/.ssh/authorized_keys
+ssh/.ssh/agent/
 .DS_Store
