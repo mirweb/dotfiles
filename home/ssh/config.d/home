@@ -13,3 +13,8 @@ Host syno
 
 Host nas
 	User admin
+
+Host oci-k3s
+  HostName 79.76.110.168
+  User ubuntu
+  IdentityFile ~/.ssh/id_ed25519_oci_k3s

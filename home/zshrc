@@ -66,3 +66,19 @@ fi
 alias vi='vim'
 alias o='xdg-open'
 alias ansible-playbook='ansible-playbook --vault-password-file ~/.ansible_vault_pw'
+
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/mirweb/.cache/lm-studio/bin"
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/mirweb/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
