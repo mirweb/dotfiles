@@ -6,6 +6,20 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+## [2026-03-29] (2)
+
+### Added
+- `install.sh` script based on GNU Stow with support for all/single module stow, restow, and delete
+- Stow module structure: `zsh`, `vim`, `screen`, `ssh`, `git`
+
+### Removed
+- dotbot git submodule and all related config files (`install`, `install.conf.yaml`, `bootstrap.conf.yaml`, `install.ps1`)
+- Flat `home/` directory structure
+
+### Changed
+- Migrated `~/.gitconfig` to stow-managed `git/.gitconfig` module
+- Updated README with stow-based setup and usage instructions
+
 ## [2026-03-29]
 
 ### Added
