@@ -1,0 +1,5 @@
+[tools]
+node      = "24"
+java      = "temurin-21"
+glab      = "latest"
+opentofu  = "latest"

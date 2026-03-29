@@ -4,7 +4,7 @@ set -euo pipefail
 
 DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 TARGET_DIR="$HOME"
-MODULES=(zsh vim screen ssh git fish)
+MODULES=(zsh vim screen ssh git fish mise)
 
 usage() {
   cat <<EOF

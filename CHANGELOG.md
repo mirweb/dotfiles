@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+### Added
+- `mise` module: `~/.config/mise/config.toml` with node, java, glab, opentofu
+- `fish` module: `~/.config/fish/config.fish`
+
 ## [1.0.0] - 2026-03-29
 
 ### Added
