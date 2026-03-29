@@ -6,9 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-03-29
+
 ### Added
+- `fish` module: `~/.config/fish/config.fish` with git prompt, mise and brew integration
 - `mise` module: `~/.config/mise/config.toml` with node, java, glab, opentofu
-- `fish` module: `~/.config/fish/config.fish`
+- `fish/README.md`: documents required universal variables and setup instructions
+- `mise/README.md`: documents tools and setup instructions
+- `.claude/CLAUDE.md`: project rules for safe file handling during migrations
 
 ## [1.0.0] - 2026-03-29
 
