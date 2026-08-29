@@ -43,9 +43,13 @@ any required privilege escalation.
 
 ## Updates
 
+After the initial bootstrap, `~/.dotfiles` and the global mise configuration
+are linked. Update and converge from the checkout:
+
 ```sh
-git -C ~/.local/share/mise/bootstrap-repo pull --ff-only
-mise -C ~/.local/share/mise/bootstrap-repo bootstrap --update --yes
+cd ~/.dotfiles
+git pull --ff-only
+mise bootstrap --update --yes
 ```
 
 ## Managing changes
