@@ -1,9 +1,19 @@
 fish/.config/fish/fish_variables
 fish/.config/fish/conf.d/secrets.fish
+.config/fish/fish_variables
+.config/fish/conf.d/secrets.fish
 
 ssh/.ssh/id_*
 ssh/.ssh/known_hosts*
 ssh/.ssh/podman-machine*
 ssh/.ssh/authorized_keys
 ssh/.ssh/agent/
+.ssh/id_*
+.ssh/known_hosts*
+.ssh/podman-machine*
+.ssh/authorized_keys
+.ssh/agent/
+
+mise.local.toml
+mise.*.local.toml
 .DS_Store

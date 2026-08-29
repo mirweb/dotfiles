@@ -10,24 +10,27 @@ When restructuring, migrating, or moving files:
 4. **Never `rm -rf` a directory that was previously a symlink target** — it may contain user data (SSH keys, etc.) that is not in git.
 5. **When in doubt, ask** — if unsure whether a file is safe to remove, ask the user first.
 
-## Stow module structure
+## mise dotfile structure
 
-Each tool is a separate stow module under `~/.dotfiles/<module>/`.
-The directory tree inside mirrors the home directory with dotfile names:
+Managed sources live in the bootstrap repository root and are explicitly mapped
+in `.config/mise/config.toml`:
 
 ```
-fish/.config/fish/config.fish  →  ~/.config/fish/config.fish
-ssh/.ssh/config                →  ~/.ssh/config
-zsh/.zshrc                     →  ~/.zshrc
+.config/fish/config.fish  →  ~/.config/fish/config.fish
+.ssh/config                →  ~/.ssh/config
+.zshrc                     →  ~/.zshrc
 ```
 
-## Adding a new module checklist
+The bootstrap checkout lives at `~/.local/share/mise/bootstrap-repo` and is
+linked to `~/.dotfiles`. Never manage `~/.ssh` as a whole directory; map only
+the specific configuration paths that the repository owns.
 
-- [ ] Create `<module>/` directory mirroring target paths
-- [ ] Copy (not move) files into the module
+## Adding a managed file checklist
+
+- [ ] Copy (not move) the file into the mirrored repository path
 - [ ] Verify content matches the original
 - [ ] Add sensitive/dynamic files to `.gitignore`
-- [ ] Run `./install.sh <module>` and verify symlinks
-- [ ] Add module to the `MODULES` list in `install.sh`
+- [ ] Add an explicit `[dotfiles]` mapping in `.config/mise/config.toml`
+- [ ] Run `mise bootstrap dotfiles apply --dry-run` and verify the proposed links
 - [ ] Update `CHANGELOG.md`
 - [ ] Only then remove originals (if applicable)

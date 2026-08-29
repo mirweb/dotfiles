@@ -1,76 +1,70 @@
 # dotfiles
 
-Managed with [GNU Stow](https://www.gnu.org/software/stow/).
+Managed with [mise bootstrap](https://mise.jdx.dev/bootstrap.html).
 
-## Modules
+The bootstrap repository lives at `~/.local/share/mise/bootstrap-repo` and is
+linked to `~/.dotfiles` for convenient access. The configuration supports macOS
+and Debian/Ubuntu, uses Fish as the login shell, and leaves desktop integrations
+such as OrbStack, Rancher Desktop, and LM Studio optional.
 
-| Module   | Files                                      |
-|----------|--------------------------------------------|
-| `zsh`    | `~/.zshrc`                                 |
-| `vim`    | `~/.vimrc`                                 |
-| `screen` | `~/.screenrc`                              |
-| `ssh`    | `~/.ssh/config`, `~/.ssh/config.d/`        |
-| `git`    | `~/.gitconfig`                             |
+## Managed files
+
+| Target | Source |
+|---|---|
+| `~/.dotfiles` | mise bootstrap checkout |
+| `~/.config/fish/` | `.config/fish/` |
+| `~/.config/mise/config.toml` | `.config/mise/config.toml` |
+| `~/.gitconfig` | `.gitconfig` |
+| `~/.screenrc` | `.screenrc` |
+| `~/.ssh/config`, `~/.ssh/config.d/` | `.ssh/config`, `.ssh/config.d/` |
+| `~/.vimrc` | `.vimrc` |
+| `~/.zshrc` | `.zshrc` |
 
 ## Install
 
-### Prerequisites
+Install [mise](https://mise.jdx.dev/getting-started.html) first, then bootstrap
+the machine from this repository:
 
 ```sh
-# macOS
-brew install stow
-
-# Debian/Ubuntu
-apt install stow
+mise bootstrap --from git@github.com:mirweb/dotfiles.git --yes
 ```
 
-### Setup on a new machine
+Preview changes before applying them:
 
 ```sh
-git clone https://github.com/mirweb/dotfiles.git ~/.dotfiles
+mise bootstrap --from git@github.com:mirweb/dotfiles.git --dry-run
+```
+
+`mise bootstrap` installs declared host packages, links the managed files,
+installs mise tools, and configures Fish as the login shell. It prompts before
+any required privilege escalation.
+
+## Updates
+
+```sh
+mise bootstrap --from git@github.com:mirweb/dotfiles.git --update --yes
+```
+
+## Managing changes
+
+Managed files are symlinks. Edit their source in `~/.dotfiles`; the live target
+updates immediately. After adding a new file, add its target to
+`.config/mise/config.toml`, then preview and apply the new link:
+
+```sh
 cd ~/.dotfiles
-./install.sh
+mise bootstrap dotfiles apply --dry-run
+mise bootstrap dotfiles apply --yes
 ```
 
-To set zsh as default shell:
+To change a managed tool, update `[tools]` in `.config/mise/config.toml` and
+run `mise install`. To add a host package, update `[bootstrap.packages]` and
+run `mise bootstrap packages apply --yes`.
 
-```sh
-chsh -s $(which zsh)
-```
+## Existing Stow installation
 
-## Usage
-
-```sh
-# Stow all modules
-./install.sh
-
-# Stow specific modules only
-./install.sh zsh vim
-
-# Update (restow) all modules after a git pull
-./install.sh --update
-
-# Update a specific module
-./install.sh --update zsh
-
-# Remove symlinks for a module
-./install.sh --delete ssh
-```
-
-## Add a new module
-
-Create a folder named after the module. Mirror the target directory structure using dotfile names (`.`-prefix):
-
-```
-~/.dotfiles/
-  myapp/
-    .config/
-      myapp/
-        config.toml   →  symlinked to ~/.config/myapp/config.toml
-```
-
-Then stow it:
-
-```sh
-./install.sh myapp
-```
+The previous Stow modules and `install.sh` are retained during migration so
+existing local files and ignored secrets are never removed automatically. Run a
+bootstrap dry-run on an existing machine and resolve reported conflicts before
+switching to mise-managed links. In particular, never use `--force-dotfiles`
+against `~/.ssh` or an existing `~/.dotfiles` checkout without a verified backup.

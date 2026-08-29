@@ -1,0 +1,10 @@
+set backspace=2         " backspace in insert mode works like normal editor
+syntax on               " syntax highlighting
+filetype plugin on
+filetype indent on      " activates indenting for files
+set shiftwidth=2
+set tabstop=2
+set autoindent          " auto indenting
+set foldmethod=indent
+set foldlevel=99
+set number              " line numbers

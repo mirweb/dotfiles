@@ -7,7 +7,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## [Unreleased]
 
 ### Added
-- `mise/.config/mise/config.toml`: added `uv` and `age` tools
+- mise bootstrap configuration for macOS and Debian/Ubuntu, including Fish as the login shell
+- declarative managed-file mappings and a `~/.dotfiles` link to mise's bootstrap checkout
+
+### Changed
+- replaced the documented GNU Stow installation workflow with `mise bootstrap`
+- made Fish and Zsh startup configuration portable and conditional on optional desktop tools
 
 ## [1.1.2] - 2026-03-29
 
