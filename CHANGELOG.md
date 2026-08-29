@@ -6,6 +6,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+### Added
+- `mise/.config/mise/config.toml`: added `uv` and `age` tools
+
 ## [1.1.2] - 2026-03-29
 
 ### Changed
