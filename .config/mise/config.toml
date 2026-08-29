@@ -9,9 +9,7 @@ uv = "latest"
 age = "latest"
 
 [bootstrap.packages]
-"brew:git" = { os = "macos" }
 "brew:fish" = { os = "macos" }
-"apt:git" = { os = "linux" }
 "apt:fish" = { os = "linux" }
 
 [dotfiles]
