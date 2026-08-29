@@ -26,13 +26,15 @@ Install [mise](https://mise.jdx.dev/getting-started.html) first, then bootstrap
 the machine from this repository:
 
 ```sh
-mise bootstrap --from git@github.com:mirweb/dotfiles.git --yes
+git clone git@github.com:mirweb/dotfiles.git ~/.local/share/mise/bootstrap-repo
+mise trust ~/.local/share/mise/bootstrap-repo/.config/mise/config.toml
+mise -C ~/.local/share/mise/bootstrap-repo bootstrap --yes
 ```
 
 Preview changes before applying them:
 
 ```sh
-mise bootstrap --from git@github.com:mirweb/dotfiles.git --dry-run
+mise -C ~/.local/share/mise/bootstrap-repo bootstrap --dry-run
 ```
 
 `mise bootstrap` installs declared host packages, links the managed files,
@@ -42,7 +44,8 @@ any required privilege escalation.
 ## Updates
 
 ```sh
-mise bootstrap --from git@github.com:mirweb/dotfiles.git --update --yes
+git -C ~/.local/share/mise/bootstrap-repo pull --ff-only
+mise -C ~/.local/share/mise/bootstrap-repo bootstrap --update --yes
 ```
 
 ## Managing changes

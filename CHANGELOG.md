@@ -14,6 +14,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - replaced the documented GNU Stow installation workflow with `mise bootstrap`
 - made Fish and Zsh startup configuration portable and conditional on optional desktop tools
 - removed the redundant Git package declaration from mise bootstrap
+- updated bootstrap instructions for mise versions without `bootstrap --from`
 
 ## [1.1.2] - 2026-03-29
 
