@@ -13,7 +13,7 @@ When restructuring, migrating, or moving files:
 ## mise dotfile structure
 
 Managed sources live in the bootstrap repository root and are explicitly mapped
-in `.config/mise/config.toml`:
+in `mise.toml`:
 
 ```
 .config/fish/config.fish  →  ~/.config/fish/config.fish
@@ -30,7 +30,7 @@ the specific configuration paths that the repository owns.
 - [ ] Copy (not move) the file into the mirrored repository path
 - [ ] Verify content matches the original
 - [ ] Add sensitive/dynamic files to `.gitignore`
-- [ ] Add an explicit `[dotfiles]` mapping in `.config/mise/config.toml`
-- [ ] Run `mise bootstrap dotfiles apply --dry-run` and verify the proposed links
+- [ ] Add an explicit `[dotfiles]` mapping in `mise.toml`
+- [ ] Run `mise dot apply --dry-run` and verify the proposed links
 - [ ] Update `CHANGELOG.md`
 - [ ] Only then remove originals (if applicable)

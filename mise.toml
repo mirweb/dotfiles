@@ -1,4 +1,4 @@
-min_version = "2026.8.0"
+    min_version = "2026.8.0"
 
 [tools]
 node = "24"
@@ -15,10 +15,10 @@ fnox = "latest"
 
 [dotfiles]
 "~/.dotfiles" = { source = "~/.local/share/mise/bootstrap-repo" }
-"~/.config/mise/config.toml" = { source = "~/.local/share/mise/bootstrap-repo/.config/mise/config.toml" }
-"~/.config/mise/config.linux.toml" = { source = "~/.local/share/mise/bootstrap-repo/.config/mise/config.linux.toml" }
-"~/.config/mise/config.macos.toml" = { source = "~/.local/share/mise/bootstrap-repo/.config/mise/config.macos.toml" }
-"~/.config/mise/config.macos-arm64.toml" = { source = "~/.local/share/mise/bootstrap-repo/.config/mise/config.macos-arm64.toml" }
+"~/.config/mise/config.toml" = { source = "~/.local/share/mise/bootstrap-repo/mise.toml" }
+"~/.config/mise/config.linux.toml" = { source = "~/.local/share/mise/bootstrap-repo/mise.linux.toml" }
+"~/.config/mise/config.macos.toml" = { source = "~/.local/share/mise/bootstrap-repo/mise.macos.toml" }
+"~/.config/mise/config.macos-arm64.toml" = { source = "~/.local/share/mise/bootstrap-repo/mise.macos-arm64.toml" }
 "~/.config/fish" = { source = "~/.local/share/mise/bootstrap-repo/.config/fish", mode = "symlink-each", manifest = "git" }
 "~/.gitconfig" = { source = "~/.local/share/mise/bootstrap-repo/.gitconfig" }
 "~/.screenrc" = { source = "~/.local/share/mise/bootstrap-repo/.screenrc" }
