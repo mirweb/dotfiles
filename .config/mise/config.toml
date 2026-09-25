@@ -7,6 +7,7 @@ glab = "latest"
 opentofu = "latest"
 uv = "latest"
 age = "latest"
+fnox = "latest"
 
 [bootstrap.packages]
 "brew:fish" = { os = "macos" }
