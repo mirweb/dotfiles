@@ -6,7 +6,7 @@ When restructuring, migrating, or moving files:
 
 1. **Copy first, delete never** — always copy files to the new location and verify they arrived before touching the source.
 2. **Check for untracked secrets** — files like SSH keys, tokens, and credentials are excluded from git via `.gitignore`. They exist only on disk. Deleting a directory removes them permanently with no recovery (unless Time Machine is available).
-3. **Verify symlinks before removing originals** — when switching symlink targets (e.g. dotbot → stow), confirm the new symlink resolves correctly before removing the old one.
+3. **Verify symlinks before removing originals** — when switching symlink targets (e.g. Stow → mise), confirm the new symlink resolves correctly before removing the old one.
 4. **Never `rm -rf` a directory that was previously a symlink target** — it may contain user data (SSH keys, etc.) that is not in git.
 5. **When in doubt, ask** — if unsure whether a file is safe to remove, ask the user first.
 
