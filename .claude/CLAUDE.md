@@ -1,36 +1,7 @@
-# Dotfiles Project Rules
+# Dotfiles project guidance
 
-## Never delete files without explicit confirmation
-
-When restructuring, migrating, or moving files:
-
-1. **Copy first, delete never** — always copy files to the new location and verify they arrived before touching the source.
-2. **Check for untracked secrets** — files like SSH keys, tokens, and credentials are excluded from git via `.gitignore`. They exist only on disk. Deleting a directory removes them permanently with no recovery (unless Time Machine is available).
-3. **Verify symlinks before removing originals** — when switching symlink targets (e.g. Stow → mise), confirm the new symlink resolves correctly before removing the old one.
-4. **Never `rm -rf` a directory that was previously a symlink target** — it may contain user data (SSH keys, etc.) that is not in git.
-5. **When in doubt, ask** — if unsure whether a file is safe to remove, ask the user first.
-
-## mise dotfile structure
-
-Managed sources live in the bootstrap repository root and are explicitly mapped
-in `mise.toml`:
-
-```
-.config/fish/config.fish  →  ~/.config/fish/config.fish
-.ssh/config                →  ~/.ssh/config
-.zshrc                     →  ~/.zshrc
-```
-
-The bootstrap checkout lives at `~/.local/share/mise/bootstrap-repo` and is
-linked to `~/.dotfiles`. Never manage `~/.ssh` as a whole directory; map only
-the specific configuration paths that the repository owns.
-
-## Adding a managed file checklist
-
-- [ ] Copy (not move) the file into the mirrored repository path
-- [ ] Verify content matches the original
-- [ ] Add sensitive/dynamic files to `.gitignore`
-- [ ] Add an explicit `[dotfiles]` mapping in `mise.toml`
-- [ ] Run `mise dot apply --dry-run` and verify the proposed links
-- [ ] Update `CHANGELOG.md`
-- [ ] Only then remove originals (if applicable)
+- The bootstrap checkout lives at `~/.local/share/mise/bootstrap-repo` and is linked as `~/.dotfiles`. Managed sources are in the repository root; their targets are declared under `[dotfiles]` in `mise.toml`.
+- Before moving or deleting a source, check for ignored or untracked files (especially SSH keys and secrets). Copy or back up what must be kept, verify new links, and ask for explicit confirmation before deleting originals. Never recursively remove `~/.ssh` or a directory that may contain local data.
+- Manage only the SSH config paths this repo owns, not the whole `~/.ssh` directory. Keep machine-specific secrets out of Git.
+- When adding a managed file, add its target to `mise.toml`, run `mise dot apply --dry-run`, then apply after checking for conflicts. Avoid blanket `--force-dotfiles`.
+- Add an Unreleased changelog entry for user-visible changes; don't require one for purely internal maintenance. Review staged changes for secrets before committing.
