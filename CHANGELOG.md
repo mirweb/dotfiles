@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+## [2.0.0] - 2026-09-25
+
 ### Added
 - mise bootstrap configuration for macOS and Debian/Ubuntu, including Fish as the login shell
 - declarative managed-file mappings and a `~/.dotfiles` link to mise's bootstrap checkout
