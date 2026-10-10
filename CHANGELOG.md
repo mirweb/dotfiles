@@ -10,6 +10,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - OpenCode project guidance for safe dotfile and SSH changes
 - `HOMEBREW_NO_ENV_HINTS=1` in the Fish environment so `brew upgrade` no longer prints upgrade hints
 
+### Changed
+- SSH no longer warns about a missing post-quantum key exchange when connecting to `syno`
+
 ## [2.0.0] - 2026-09-25
 
 ### Added
