@@ -13,6 +13,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Changed
 - SSH no longer warns about a missing post-quantum key exchange when connecting to `syno`
 
+### Fixed
+- Fish verwendet für mkcert die bestehende macOS-CA statt eines separaten XDG-Verzeichnisses.
+
 ## [2.0.0] - 2026-09-25
 
 ### Added

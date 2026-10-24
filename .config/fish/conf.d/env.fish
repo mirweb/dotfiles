@@ -11,3 +11,8 @@ set -gx XDG_CACHE_HOME $HOME/.cache
 
 # Homebrew: Environment-Hints ausblenden (siehe `man brew`)
 set -gx HOMEBREW_NO_ENV_HINTS 1
+
+# mkcert: bestehende macOS-CA verwenden statt $XDG_DATA_HOME/mkcert
+if test (uname) = Darwin
+    set -gx CAROOT "$HOME/Library/Application Support/mkcert"
+end
